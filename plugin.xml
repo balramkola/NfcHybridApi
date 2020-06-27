@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-nfchybridapi" version="1.0.0">
+   <name>NfcHybridPlugin</name>
+   <js-module name="NfcHybridPlugin" src="www/NfcHybridPlugin.js">
+      <clobbers target="NfcHybridPlugin" />
+   </js-module>
+   <platform name="android">
+      <config-file parent="/*" target="res/xml/config.xml">
+         <feature name="NfcHybridPlugin">
+            <param name="android-package" value="cordova.plugin.nfchybridapi.NfcHybridPlugin" />
+         </feature>
+      </config-file>
+      <config-file parent="/*" target="AndroidManifest.xml" />
+      <source-file src="src/android/NfcHybridPlugin.java" target-dir="src/cordova/plugin/nfchybridapi/NfcHybridPlugin" />
+   </platform>
+</plugin>
